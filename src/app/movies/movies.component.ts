@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { MoviesService } from './movies.service';
 
 // Models
-import { MovieShort } from './movies.model';
+// import { MovieShort } from './movies.model';
 
 @Component({
   selector: 'app-movies',

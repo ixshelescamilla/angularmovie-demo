@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 // Models
-import { MovieShort } from './movies.model';
+// import { MovieShort } from './movies.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,7 @@ export class MoviesService {
     console.log('search text: ', searchText)
     return this.http.get(`https://api.themoviedb.org/4/search/movie?api_key=81e62e7b57bda8891bd2fe3dd4291456&language=en-US&query=${searchText}&page=1&include_adult=false`)
       .pipe(
-        map((data: Array<MovieShort>) => data),
+        map((data: Array<any>) => data),
         catchError(error => error)
       );
   }
