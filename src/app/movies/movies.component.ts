@@ -26,8 +26,9 @@ export class MoviesComponent implements OnInit {
   }
 
   search() {
-    this.movies$.getSearch(this.searchField).subscribe((res: any) => {
-      this.searchList = res.Search;
+    
+    this.movies$.getSearch(this.searchField.value).subscribe((res: any) => {
+      this.searchList = res.results;
       this.totalResults = res.totalResults;
       console.log(this.searchList)
     });
